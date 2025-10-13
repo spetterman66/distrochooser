@@ -2,6 +2,13 @@ const distroName = document.getElementById("name");
 const description = document.getElementById("description");
 const link = document.getElementById("link");
 const logo = document.getElementById("logo");
+const distrobutton = document.getElementById("distrobtn");
+
+// if distrobtn is pressed, change text to "Next"
+
+distrobutton.addEventListener("click", function() {
+    distrobutton.innerHTML = "Next";
+});
 
 const beginnerDistro = {
     1: {
@@ -12,20 +19,29 @@ const beginnerDistro = {
     2: {
         name: "Linux Mint",
         description: "Linux Mint is a popular Linux distribution that is known for its ease of use and user-friendly interface. It is based on Ubuntu and comes with a variety of desktop environments to choose from.",
-        link: "https://linuxmint.com/",
-        logo: "images/Linux Mint.png"
+        link: "https://linuxmint.com/"
     },
     3: {
         name: "Ubuntu",
-        description: "Ubuntu is one of the most popular Linux distributions and is known for its ease of use and stability. It is based on Debian and comes with the GNOME desktop environment by default.",
+        description: "Ubuntu is one of the most popular Linux distributions and is known for its ease of use and stability. It is based on Debian and comes with the GNOME desktop environment by default. It also comes with the snap package manager.",
         link: "https://ubuntu.com/"
     },
     4: {
+        name: "Kubuntu",
+        description: "Kubuntu is an official flavor of Ubuntu that uses the KDE Plasma desktop environment. It is known for its modern and customizable interface and is a great choice for users who want a visually appealing operating system.",
+        link: "https://kubuntu.org/"
+    },
+    5: {
+        name: "Xubuntu",
+        description: "Xubuntu is an official flavor of Ubuntu that uses the Xfce desktop environment. It is known for its lightweight and fast performance and is a great choice for users who want a simple and efficient operating system, especially on older hardware.",
+        link: "https://xubuntu.org/"
+    },
+    6: {
         name: "MX Linux",
         description: "MX Linux is a midweight Linux distribution that is based on Debian and antiX. It is known for its stability and performance and is a great choice for users who want a lightweight and customizable operating system.",
         link: "https://mxlinux.org/"
     },
-    5: {
+    7: {
         name: "Elementary OS",
         description: "Elementary OS is a beautiful and user-friendly Linux distribution that is based on Ubuntu. It is known for its clean and modern design and comes with a variety of pre-installed applications. Good for users who want a macOS-like experience.",
         link: "https://elementary.io/"
@@ -33,7 +49,7 @@ const beginnerDistro = {
 }
 
 function randomBeginnerDistro() {
-    let distro = beginnerDistro[Math.floor(Math.random() * 5) + 1];
+    let distro = beginnerDistro[Math.floor(Math.random() * 6) + 1];
     distroName.innerHTML = distro.name;
     description.innerHTML = distro.description;
     link.innerHTML = `<a href="${distro.link}" target="_blank">${distro.link}</a>`;
