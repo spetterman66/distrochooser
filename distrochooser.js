@@ -45,7 +45,12 @@ const beginnerDistro = {
         name: "Elementary OS",
         description: "Elementary OS is a beautiful and user-friendly Linux distribution that is based on Ubuntu. It is known for its clean and modern design and comes with a variety of pre-installed applications. Good for users who want a macOS-like experience.",
         link: "https://elementary.io/"
-    }
+    },
+    8: {
+        name: "KDE Linux",
+        description: "KDE Linux is a general purpose, user-focused Linux distribution by the KDE community currently in alpha status.",
+        link: "https://linux.kde.org"
+    },
 }
 
 function randomBeginnerDistro() {
@@ -96,6 +101,11 @@ const intermediateDistro = {
         name: "KDE neon",
         description: "KDE neon is a Linux distribution that is known for its focus on the KDE Plasma desktop environment. It is based on Ubuntu and comes with the latest version of KDE Plasma by default.",
         link: "https://neon.kde.org/"
+    },
+    9: {
+        name: "CachyOS",
+        description: "CachyOS is a Linux distribution based on Arch Linux. It incorporates a graphical user interface and a set of performance modifications by default in an effort to create a more user friendly and responsive experience.",
+        link: "https://cachyos.org"
     }
 }
 
